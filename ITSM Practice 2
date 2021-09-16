@@ -1,0 +1,11 @@
+//Create a problem task record if a problem record is saved with a priority of 1 - Critical, and
+//relate it to the problem record
+(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+    var gr = new GlideRecord('problem_task');
+    gr.newRecord();
+    gr.problem = current.sys_id.toString();
+    gr.short_description = current.short_description;
+    gr.insert();
+})(current, previous);
