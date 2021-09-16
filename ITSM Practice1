@@ -1,0 +1,10 @@
+// Delete the Incidents wih Priority '3' and in state 'In progress' 
+var gr = new GlideRecord('incident');
+gr.addQuery('priority',3);
+gr.addQuery('state',2);
+gr.query();
+while(gr.next())
+{
+gr.deleteRecord();
+//gs.print(gr.number + " "  + gr.priority); ---> Show what tables are present with Priority '3' and State ' IN progess"
+}
