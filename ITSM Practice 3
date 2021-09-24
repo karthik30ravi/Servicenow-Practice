@@ -1,0 +1,12 @@
+//Create a client script which informs the user that a problem with a priority of 1 - Critical will create a problem task
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    //Type appropriate comment here, and begin script below
+    var priorProb = g_form.getValue('priority');
+    if (priorProb == 1) {
+        g_form.addInfoMessage("Problem task will be created as it is the PRiority 1 incident");
+    }
+}
